@@ -6,7 +6,7 @@ export async function fetchHome() {
 
 export async function fetchSearch(query) {
   const res = await fetch(
-    `https://rizaapi.vercel.app/api/zoronime/search/${query}`
+    `https://rizaapi.vercel.app/zoronime/search/${query}`
   );
   const data = res.json();
   return data;

@@ -1,5 +1,5 @@
 export async function fetchHome() {
-  const res = await fetch(`https://rizaapi.vercel.app/api/zoronime/home`);
+  const res = await fetch(`https://rizaapi.vercel.app/zoronime/home`);
   const data = res.json();
   return data;
 }
@@ -14,7 +14,7 @@ export async function fetchSearch(query) {
 
 export async function fetchDetail(endpoint) {
   const res = await fetch(
-    `https://rizaapi.vercel.app/api/zoronime/anime/${endpoint}`
+    `https://rizaapi.vercel.app/zoronime/anime/${endpoint}`
   );
   const data = res.json();
   return data;
@@ -22,7 +22,7 @@ export async function fetchDetail(endpoint) {
 
 export async function fetchDaftar() {
   const res = await fetch(
-    "https://rizaapi.vercel.app/api/zoronime/genre"
+    "https://rizaapi.vercel.app/zoronime/genre"
   );
   const data = res.json();
   return data;
@@ -30,7 +30,7 @@ export async function fetchDaftar() {
 
 export async function fetchJadwal() {
   const res = await fetch(
-    "https://rizaapi.vercel.app/api/zoronime/ongoing"
+    "https://rizaapi.vercel.app/zoronime/ongoing"
   );
   const data = res.json();
   return data;

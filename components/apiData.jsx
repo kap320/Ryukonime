@@ -1,12 +1,12 @@
 export async function fetchHome() {
-  const res = await fetch(`https://komi.katowproject.app/api/otakudesu/home`);
+  const res = await fetch(`https://rizaapi.vercel.app/api/zoronime/home`);
   const data = res.json();
   return data;
 }
 
 export async function fetchSearch(query) {
   const res = await fetch(
-    `https://otakudesu-anime-api.vercel.app/api/v1/search/${query}`
+    `https://rizaapi.vercel.app/api/zoronime/search/${query}`
   );
   const data = res.json();
   return data;
@@ -14,7 +14,7 @@ export async function fetchSearch(query) {
 
 export async function fetchDetail(endpoint) {
   const res = await fetch(
-    `https://otakudesu-anime-api.vercel.app/api/v1/detail${endpoint}`
+    `https://rizaapi.vercel.app/api/zoronime/anime/${endpoint}`
   );
   const data = res.json();
   return data;
@@ -22,7 +22,7 @@ export async function fetchDetail(endpoint) {
 
 export async function fetchDaftar() {
   const res = await fetch(
-    "https://otakudesu-anime-api.vercel.app/api/v1/anime-list"
+    "https://rizaapi.vercel.app/api/zoronime/genre"
   );
   const data = res.json();
   return data;
@@ -30,7 +30,7 @@ export async function fetchDaftar() {
 
 export async function fetchJadwal() {
   const res = await fetch(
-    "https://otakudesu-anime-api.vercel.app/api/v1/ongoing"
+    "https://rizaapi.vercel.app/api/zoronime/ongoing"
   );
   const data = res.json();
   return data;
@@ -38,8 +38,8 @@ export async function fetchJadwal() {
 
 export async function fetchEpisode(episode, id) {
   const url = id
-    ? `https://otakudesu-anime-api.vercel.app/api/v1/episode/${episode}/?id=${id}`
-    : `https://otakudesu-anime-api.vercel.app/api/v1/episode/${episode}`;
+    ? `https://rizaapi.vercel.app/anime/:slug/:episode/${episode}/?id=${id}`
+    : `https://rizaapi.vercel.app/anime/:slug/:episode/${episode}`;
   const res = await fetch(url);
   const data = res.json();
   return data;
